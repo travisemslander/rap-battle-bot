@@ -26,6 +26,7 @@ stop:
 
 logs:
 	@echo "--- Trailing logs for: $(CONTAINER_NAME) (press ctrl+c to exit) ---"
+	docker logs $(CONTAINER_NAME)
 
 
 clean:

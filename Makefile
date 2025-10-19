@@ -22,6 +22,7 @@ run:
 stop:
 	@echo "-- stopping container and removing container ---"
 	docker stop $(CONTAINER_NAME)
+	docker rm $(CONTAINER_NAME)
 
 
 logs:

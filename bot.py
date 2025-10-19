@@ -35,7 +35,10 @@ async def on_message(message):
     if d_client.user not in message.mentions:
         return
 
+    await message.add_reaction('⏳')  # Hourglass emoji
     await message.channel.send(battle(message.content))
+    await message.add_reaction('✅')  # Check mark emoji
+    await message.remove_reaction('⏳', d_client.user)
 
 d_client.run(os.getenv('TOKEN'))
 
